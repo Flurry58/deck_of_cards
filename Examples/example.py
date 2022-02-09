@@ -14,9 +14,6 @@ class mainpage(Frame):
     self.master = master
     self.pack(fill=BOTH, expand=1)
     
-  def setloc(self,index,x,y):
-    r = self.labellist[index].grid_location(x,y)
-    
    #clear screen
   def clear(self):
     for i in range(len(self.labellist)):
@@ -68,11 +65,15 @@ mainpage.addimage(app, "7H", (0,0))
 #mainpage.removeimage(app,0)
 
 
-mainpage.addimage(app, "9H", (0,0))
+
+mainpage.addimage(app, "9H", (100,0))
 #clear canvas
-mainpage.clear(app)
+
+
 mainpage.addimage(app, "7H", (0,0))
 mainpage.clear(app)
+mainpage.addimage(app, "KS", (100,100))
+#after all that the only thing on the screen will be the King of Spades since everything else was cleared
 win.wm_title("Tkinter button")
 win.geometry("320x200")
 win.mainloop()
