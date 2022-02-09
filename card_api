@@ -14,9 +14,6 @@ class mainpage(Frame):
     self.master = master
     self.pack(fill=BOTH, expand=1)
     
-  def setloc(self,index,x,y):
-    r = self.labellist[index].grid_location(x,y)
-    
   def clear(self):
     for i in range(len(self.labellist)):
       self.labellist[i].destroy()
