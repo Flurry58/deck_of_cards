@@ -42,16 +42,6 @@ class mainpage(Frame):
     self.label1.image = test
     self.label1.place(x=position[0],y=position[1])
     self.labellist.append(self.label1)
-
-
-win = Tk()
-frame = Frame(win)
-app = mainpage(frame)
-mainpage.addimage(app,"4C",(100,0))
-win.wm_title("Tkinter button")
-win.geometry("320x200")
-win.mainloop()
-
     new_im = Image.new("RGB", (desired_size, desired_size))
     new_im.paste(im, ((desired_size-new_size[0])//2,(desired_size-new_size[1])//2))
     test = ImageTk.PhotoImage(new_im)
@@ -61,10 +51,4 @@ win.mainloop()
     self.label1.place(x=position[0],y=position[1])
     self.labellist.append(self.label1)
 
-#add in code
-#win = Tk()
-#frame = Frame(win)
-#app = mainpage(frame)
-#win.wm_title("Tkinter button")
-#win.geometry("320x200")
-#win.mainloop()
+
