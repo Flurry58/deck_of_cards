@@ -74,6 +74,6 @@ mainpage.addimage(app, "7H", (0,0))
 mainpage.clear(app)
 mainpage.addimage(app, "KS", (100,100))
 #after all that the only thing on the screen will be the King of Spades since everything else was cleared
-win.wm_title("Tkinter button")
+win.wm_title("Cards")
 win.geometry("320x200")
 win.mainloop()
