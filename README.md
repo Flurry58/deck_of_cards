@@ -12,6 +12,6 @@ If you are using repl.it make sure to select the python tkinter template (to do 
 
 Examples are in the example folder
 
-To import type:
+To import, type:
 
 import deck_of_cards
