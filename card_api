@@ -25,7 +25,6 @@ class mainpage(Frame):
   # Create a photoimage object of the image in the path
     cardname += ".png"
     desired_size = 100
-    cardname = "cards/" + cardname
     im = Image.open(cardname)
     old_size = im.size  
 
@@ -46,7 +45,7 @@ class mainpage(Frame):
     new_im.paste(im, ((desired_size-new_size[0])//2,(desired_size-new_size[1])//2))
     test = ImageTk.PhotoImage(new_im)
 
-    self.label1 = tkinter.Label(win,image=test,text=name)
+    self.label1 = tkinter.Label(win,image=test)
     self.label1.image = test
     self.label1.place(x=position[0],y=position[1])
     self.labellist.append(self.label1)
