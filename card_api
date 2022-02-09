@@ -17,9 +17,10 @@ class mainpage(Frame):
   def setloc(self,index,x,y):
     r = self.labellist[index].grid_location(x,y)
     
-  def removeimage(self):
+  def clear(self):
     for i in range(len(self.labellist)):
       self.labellist[i].destroy()
+    self.labellist = []()
 
   def addimage(self, cardname, position):
   # Create a photoimage object of the image in the path
