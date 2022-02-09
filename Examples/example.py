@@ -21,10 +21,9 @@ class mainpage(Frame):
   def clear(self):
     for i in range(len(self.labellist)):
       self.labellist[i].destroy()
+    self.labellist = []
       
     #remove specific image by index
-  def removeimage(self,index):
-    self.labellist[index].destroy()
 
   def addimage(self, cardname, position):
   # Create a photoimage object of the image in the path
@@ -51,7 +50,7 @@ class mainpage(Frame):
     new_im.paste(im, ((desired_size-new_size[0])//2,(desired_size-new_size[1])//2))
     test = ImageTk.PhotoImage(new_im)
 
-    self.label1 = tkinter.Label(win,image=test,text=name)
+    self.label1 = tkinter.Label(win,image=test)
     self.label1.image = test
     self.label1.place(x=position[0],y=position[1])
     self.labellist.append(self.label1)
@@ -63,16 +62,17 @@ app = mainpage(frame)
 #add func here
 
 #create an image
-mainpage.addimage(app, "9H", (0,0))
+mainpage.addimage(app, "7H", (0,0))
 #to remove images you have to identify the index. The indexes are set in order of what order you added the images. They are reset whenever you clear the screen or remove the image
 #remove image above
-mainpage.removeimage(app,0)
+#mainpage.removeimage(app,0)
 
 
 mainpage.addimage(app, "9H", (0,0))
 #clear canvas
 mainpage.clear(app)
+mainpage.addimage(app, "7H", (0,0))
+mainpage.clear(app)
 win.wm_title("Tkinter button")
 win.geometry("320x200")
 win.mainloop()
-
